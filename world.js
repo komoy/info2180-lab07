@@ -5,7 +5,12 @@ window.onload=function(){
         
         let ajax = new XMLHttpRequest();
         let country=document.getElementById("country");
-        var url='world.php?country='+country.value;
+        let url = 'world.php?';
+        if ($("#all")[0].checked){
+            url+='all=true';
+        }else{
+            url+='country='+country.value;
+        }
         ajax.onreadystatechange = function()
    {
        if(ajax.readyState==4 && ajax.status==200){
@@ -19,4 +24,11 @@ window.onload=function(){
         ajax.open("GET",url, true);
         ajax.send();
 }
+    let checkbox="<input id=all type= checkbox name=country>all</input> ";
+    $("#lookup").after(checkbox);
+    document.getElementById("all").onclick=function()
+    {
+            
+        
+    }
 }

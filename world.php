@@ -10,8 +10,10 @@ $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
  if ($country !== ""){
     $stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%';");
- }else{
+ }elseif($_GET['all'] == 'true'){
      $stmt = $conn->query("SELECT * FROM countries");
+ }else{
+     die();
  }
 
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
