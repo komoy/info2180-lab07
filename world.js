@@ -5,7 +5,7 @@ window.onload=function(){
         
         let ajax = new XMLHttpRequest();
         let country=document.getElementById("country");
-        var url='world.php?q='+country.value;
+        var url='world.php?country='+country.value;
         ajax.onreadystatechange = function()
    {
        if(ajax.readyState==4 && ajax.status==200){
