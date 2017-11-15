@@ -1,6 +1,12 @@
 body{
     background-image:url(world.jpg);
     background-repeat: no-repeat;
-     background-position: 50% -80%; 
+     background-position:70% -180%; 
     
+}
+h1{
+    font-size: 72px;
+  background: -webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
